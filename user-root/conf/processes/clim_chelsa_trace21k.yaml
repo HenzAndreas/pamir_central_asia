@@ -1,0 +1,9 @@
+# clim_chelsa_trace21k:
+update_freq: 10
+temporal_resampling: 12
+# new --------------------
+dem_filename: data/trace21k-pamir/dem/CHELSA_TraCE21k_dem_-1.nc
+vertical_lapse_rate_filename: data/trace21k-pamir/lapse_rate_monthly/chelsa_trace21k_tz_alps_-1.nc
+precipitation_filename: data/trace21k-pamir/precipitation_monthly/chelsa_trace21k_pr_alps_-1.nc
+temperature_filename: data/trace21k-pamir/temperature_monthly/chelsa_trace21k_temp_alps_-1.nc
+air_temp_offset: 0.0

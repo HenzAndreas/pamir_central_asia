@@ -1,0 +1,4 @@
+update_freq: 1
+time_start_icemargin: -1e50
+max_thickness: 20.0
+min_thickness: 1.0

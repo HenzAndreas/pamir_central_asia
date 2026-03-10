@@ -1,0 +1,60 @@
+# @package _global_
+    
+core:
+  url_data: ''
+  hardware:
+    gpu_info: true
+    visible_gpus:
+    - 1
+
+hydra:
+  run:
+    dir: output/${now:%Y-%m-%d}/start
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}
+    subdir: ${hydra.job.name}-${hydra.job.num}
+  # launcher:
+  #   n_jobs: 1
+
+defaults:
+- /user/conf/processes@processes.clim_chelsa_trace21k: clim_chelsa_trace21k
+- /user/conf/processes@processes.smb_enhanced_accpdd: smb_enhanced_accpdd
+- /user/conf/processes@processes.dummy_time: dummy_time
+- /user/conf/outputs@outputs.write_ts_henz: write_ts_henz
+
+- override /inputs:
+  - load_ncdf
+- override /processes:
+  - clim_chelsa_trace21k
+  - smb_enhanced_accpdd
+  - dummy_time
+- override /outputs:
+  - write_ncdf
+  - write_ts_henz
+
+inputs:
+  load_ncdf:
+    input_file: input.nc
+    crop: true
+    xmin: 283999
+    xmax: 298195
+    ymin: 4387818
+    ymax: 4409423
+
+processes:
+  clim_chelsa_trace21k:
+    air_temp_offset: -1.0
+  smb_enhanced_accpdd:
+    precip_offset: 1.50
+    type_of_aspect_correction: "temperature"
+    aspect_scaling_factor: 1.1
+  dummy_time:
+    start: -12000
+    end: 100
+    save: 100
+
+outputs:
+  write_ncdf:
+    vars_to_save:
+    - topg
+    - smb

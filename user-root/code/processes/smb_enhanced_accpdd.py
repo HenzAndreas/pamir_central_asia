@@ -69,8 +69,8 @@ def update(cfg, state):
         # accumulation done, now compute the positive degree day (PDD) for the melt
         if cfg.processes.smb_enhanced_accpdd.type_of_aspect_correction == "temperature":
             # if aspect correction is used for temperature, we need to compute the incidence angle of the sun on the surface, and correct the temperature accordingly
-            solar_elevation = 60.0 # degrees above the horizon
-            solar_azimuth = 180.0 # degrees from north, clockwise
+            solar_elevation = cfg.processes.smb_enhanced_accpdd.solar_elevation # degrees above the horizon
+            solar_azimuth = cfg.processes.smb_enhanced_accpdd.solar_azimuth # degrees from north, clockwise
             incidence_angle = calc_incidence_angle(state.usurf, state.dX, solar_elevation, solar_azimuth)
             # correct temperature by a factor a factor reducing or upgrading by 100 %
             # depending on the incidence angle
@@ -155,8 +155,8 @@ def update(cfg, state):
             # # ============= Andreas Henz - Aspect corection =============
             # if cfg.processes.smb_enhanced_accpdd.aspect_correction: from August 2025 aspect correction is always applied and scaled over the scaling factor, if zero (default), no aspect correction is made.
             # aspect_scaling_factor = 1.0
-            solar_elevation = 60.0 # degrees above the horizon
-            # surface, dx, solar_elevation, solar_azimuth=180.0
+            solar_elevation = cfg.processes.smb_enhanced_accpdd.solar_elevation # degrees above the horizon
+            solar_azimuth = cfg.processes.smb_enhanced_accpdd.solar_azimuth # degrees from north, clockwise
             incidence_angle = calc_incidence_angle(state.usurf, state.dX, solar_elevation, solar_azimuth=180.0)
             
             # correct smb by a factor a factor reducing or upgrading by 100 %

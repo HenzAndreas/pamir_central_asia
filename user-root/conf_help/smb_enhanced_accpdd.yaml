@@ -42,6 +42,14 @@ precip_offset:
   Type: float
   Units: dimless
   Description: "Offset for precipitation (0.5 means 50% of the precipitation than in the climate file)"
+solar_elevation:
+  Type: float
+  Units: degrees
+  Description: "Solar elevation angle above the horizon, for a latitude of 40° North, the solar elevation is 73.0 degrees at noon on the summer solstice"
+solar_azimuth:
+  Type: float
+  Units: degrees
+  Description: "Solar azimuth angle, degrees from north, clockwise, if on Northern hemisphere, otherwise 0.0 for Southern hemisphere"
 type_of_aspect_correction:
   Type: str
   Units: -
