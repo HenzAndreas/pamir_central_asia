@@ -1,0 +1,78 @@
+url_data:
+  Type: string
+  Description: "Url supplied to download .nc data files."
+  Units: dimless
+folder_data:
+  Type: string
+  Description: "Folder that holds the data for default IGM downloading."
+  Units: dimless
+logging_file:
+  Type: string
+  Description: ''
+  Units: dimless
+logging:
+  Type: boolean
+  Description: "false"
+  Units: dimless
+logging_level:
+  Type: string
+  Description: "30"
+  Units: dimless
+hardware:
+  gpu_info:
+    Type: boolean
+    Description: "true"
+    Units: dimless
+  visible_gpus:
+    Type: list
+    Description: "visible gpus."
+    Units: dimless
+  strategy:
+    Type: string
+    Description: "strategy."
+    Units: dimless
+print_params:
+  Type: boolean
+  Description: "true"
+  Units: dimless
+print_comp:
+  Type: boolean
+  Description: "Print information related to computational performances."
+  Units: dimless
+print_info:
+  Type: boolean
+  Description: "Print live information when the model is running."
+  Units: dimless
+print_imported_modules:
+  Type: boolean
+  Description: "Print imported modules."
+  Units: dimless
+check_compat_params:
+  Type: boolean
+  Description: "Check compatibility btween default pasm name and user-defined one to check for typos, ect."
+  Units: dimless
+structure:
+  root_foldername:
+    Type: string
+    Description: "user."
+    Units: dimless
+  conf_foldername:
+    Type: string
+    Description: "conf."
+    Units: dimless
+  code_foldername:
+    Type: string
+    Description: "code."
+    Units: dimless
+  input_modules_foldername:
+    Type: string
+    Description: "inputs."
+    Units: dimless
+  process_modules_foldername:
+    Type: string
+    Description: "processes."
+    Units: dimless
+  output_modules_foldername:
+    Type: string
+    Description: "outputs."
+    Units: dimless
