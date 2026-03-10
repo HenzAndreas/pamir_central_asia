@@ -8,7 +8,7 @@ print(f"Running igm_run with parameters: {sys.argv[1:]} at {os.path.basename(__f
 
 # define here your params to overwrite the default ones
 list_params = [
-    "+experiment=start"
+    "+experiment=example"
 # - processes.clim_chelsa_trace21k.air_temp_offset=-3.0
 # - processes.smb_enhanced_accpdd.precip_offset=2.5
 ]

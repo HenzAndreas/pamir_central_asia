@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: igm-model
+Version: 3.1.1
+Summary: IGM - a glacier evolution model
+Home-page: https://github.com/jouvetg/igm
+Author: Guillaume Jouvet
+Author-email: guillaume.jouvet@unil.ch
+License: gpl-3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow[and-cuda]==2.15.1
+Requires-Dist: tensorflow-probability==0.23.0
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: netCDF4==1.6.0
+Requires-Dist: xarray
+Requires-Dist: rasterio
+Requires-Dist: pyproj
+Requires-Dist: geopandas
+Requires-Dist: oggm
+Requires-Dist: salem
+Requires-Dist: pyyaml
+Requires-Dist: importlib_resources
+Requires-Dist: tqdm
+Requires-Dist: hydra-core
+Requires-Dist: omegaconf
+Requires-Dist: nvtx
+Requires-Dist: typeguard
+Requires-Dist: rich
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# pamir_central_asia
+A repository to model glaciers in the pamir, also trying to give access to other people
