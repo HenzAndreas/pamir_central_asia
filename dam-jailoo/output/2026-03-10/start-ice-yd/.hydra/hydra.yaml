@@ -114,11 +114,10 @@ hydra:
     - hydra.mode=RUN
     task:
     - +experiment=example
-    - processes.time.start=-2000
   job:
     name: igm_run
     chdir: true
-    override_dirname: +experiment=example,processes.time.start=-2000
+    override_dirname: +experiment=example
     id: ???
     num: ???
     config_name: config

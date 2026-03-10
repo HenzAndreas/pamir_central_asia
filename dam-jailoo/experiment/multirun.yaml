@@ -12,7 +12,7 @@ hydra:
     dir: output/${now:%Y-%m-%d}/example
   sweep:
     dir: multirun/${now:%Y-%m-%d}
-    subdir: ${hydra.job.name}-${hydra.job.num}
+    subdir: ${hydra.job.num}
   # launcher:
   #   n_jobs: 1
 
@@ -51,7 +51,7 @@ processes:
   clim_chelsa_trace21k:
     air_temp_offset: -1.0
   smb_enhanced_accpdd:
-    precip_offset: 1.50
+    precip_offset: 1.0
     type_of_aspect_correction: "temperature"
     aspect_scaling_factor: 1.1
   iceflow:

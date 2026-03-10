@@ -11,5 +11,5 @@ smb_maximum_accumulation: 6.0
 precip_offset: 1.0
 solar_elevation: 73.0 # for a latitude of 40° North
 solar_azimuth: 180.0 # degrees from north, clockwise, if on Northern hemisphere, otherwise 0.0
-type_of_aspect_correction: "smb"
+type_of_aspect_correction: "temperature"
 aspect_scaling_factor: 0.0

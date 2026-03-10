@@ -209,7 +209,7 @@ processes:
         print_cost: false
         print_cost_freq: 1
   time:
-    start: -2000
+    start: -15000
     end: 80.0
     save: 10
     cfl: 0.3
