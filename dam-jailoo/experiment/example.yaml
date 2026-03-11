@@ -38,9 +38,7 @@ defaults:
 
 inputs:
   load_ncdf:
-    input_file: temporary.nc
-    crop: true
-    coarsen: 2
+    input_file: input_with_ice.nc
     xmin: 283999
     xmax: 298195
     ymin: 4387818
@@ -52,7 +50,7 @@ processes:
   clim_chelsa_trace21k:
     air_temp_offset: -1.0
   smb_enhanced_accpdd:
-    precip_offset: 1.0
+    precip_offset: 1.5
     type_of_aspect_correction: "temperature"
     aspect_scaling_factor: 1.1
   iceflow:
@@ -62,7 +60,7 @@ processes:
     unified:
       bcs: [no_inflow]
   time:
-    start: -15000
+    start: -4000.0
     end: 80.0
     save: 10
   avalanche:

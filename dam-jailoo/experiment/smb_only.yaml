@@ -34,7 +34,7 @@ defaults:
 
 inputs:
   load_ncdf:
-    input_file: input.nc
+    input_file: input_with_ice.nc
     crop: true
     xmin: 283999
     xmax: 298195
