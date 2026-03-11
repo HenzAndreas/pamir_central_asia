@@ -50,8 +50,8 @@ pamir_central_asia/
 │   └── igm_run.py
 ├── dam-jailoo/          # One project at the moment
 │   ├── data/
-│   │   ├── here-your-nc-file
-│   │   └── and-ice-mask
+│   │   ├── here-your-nc-input-file # topography, initial ice thicknes, etc.
+│   │   └── and-ice-mask # as a shapefile (e.g., exported from GIS software in the right coordinate system)
 │   ├── experiment/
 │   │   └── here-are-.yaml-config-files-you-want-to-use
 │   ├── user/
