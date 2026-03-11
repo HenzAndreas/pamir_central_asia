@@ -14,8 +14,14 @@ Please always cite and refer to this page, when you are using the model*
 - Conda/Miniconda
 - Python 3.10.18
 
-### Setup (worked like this on Octopus, UNIL)
-As of **10.03.2026**, the following steps worked on Octopus:
+### Setup 
+You need to have conda installed, best (for windows user) is a WSL environment with Ubuntu installed. This works quite well: https://learn.microsoft.com/en-us/windows/wsl/install
+
+Then have Miniconda (or any other conda distribution) installed: https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer
+
+If Conda is running (in the base environment):
+
+As of **10.03.2026**, the following steps worked on Octopus (Octopus Cluster, UNIL):
 
 ```bash
 conda create -n igm-pamir
