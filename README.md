@@ -2,6 +2,10 @@
 
 *A repository to model glaciers in the Pamir, also trying to give access to other people.*
 
+## IGM
+*The Instructed Glacier Model (IGM) is coming from this repository: https://github.com/instructed-glacier-model/igm
+Please always cite and refer to this page, when you are using the model*
+
 ---
 
 ## 📦 Installation
