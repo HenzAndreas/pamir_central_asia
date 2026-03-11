@@ -14,7 +14,7 @@ Please always cite and refer to this page, when you are using the model*
 - Conda/Miniconda
 - Python 3.10.18
 
-### Setup on Octopus (UNIL)
+### Setup (worked like this on Octopus, UNIL)
 As of **10.03.2026**, the following steps worked on Octopus:
 
 ```bash
