@@ -19,6 +19,11 @@ As of **10.03.2026**, the following steps worked on Octopus:
 
 ```bash
 conda create -n igm-pamir
+```
+```bash
+conda activate igm-pamir
+```
+```bash
 conda install python=3.10.18
 ```
 
