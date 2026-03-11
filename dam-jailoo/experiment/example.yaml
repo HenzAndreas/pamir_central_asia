@@ -5,7 +5,7 @@ core:
   hardware:
     gpu_info: true
     visible_gpus:
-    - 1
+    - 1 # eventually, if you have 1 GPU availble, set this to 0, I use it on a cluster where GPU 1 is the one I should use
 
 hydra:
   run:
@@ -19,7 +19,7 @@ hydra:
 defaults:
 - /user/conf/processes@processes.clim_chelsa_trace21k: clim_chelsa_trace21k
 - /user/conf/processes@processes.smb_enhanced_accpdd: smb_enhanced_accpdd
-- /user/conf/processes@processes.heatmaps: heatmaps
+# - /user/conf/processes@processes.heatmaps: heatmaps # only used for my model-data-comparison tool. As long as we do not do a deep model-data-comparison approach, we do not need this.
 - /user/conf/outputs@outputs.write_ts_henz: write_ts_henz
 
 - override /inputs:
@@ -31,15 +31,16 @@ defaults:
   - time
   - thk
   - avalanche
-  - heatmaps
+  # - heatmaps
 - override /outputs:
   - write_ncdf
   - write_ts_henz
 
 inputs:
   load_ncdf:
-    input_file: input.nc
+    input_file: temporary.nc
     crop: true
+    coarsen: 2
     xmin: 283999
     xmax: 298195
     ymin: 4387818
@@ -51,7 +52,7 @@ processes:
   clim_chelsa_trace21k:
     air_temp_offset: -1.0
   smb_enhanced_accpdd:
-    precip_offset: 1.50
+    precip_offset: 1.0
     type_of_aspect_correction: "temperature"
     aspect_scaling_factor: 1.1
   iceflow:
@@ -66,8 +67,8 @@ processes:
     save: 10
   avalanche:
     angleOfRepose: 60.0
-  heatmaps:
-    time_start_icemargin: -14000.0
+  # heatmaps:
+  #   time_start_icemargin: -14000.0
 
 outputs:
   write_ncdf:

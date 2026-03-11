@@ -19,7 +19,7 @@ hydra:
 defaults:
 - /user/conf/processes@processes.clim_chelsa_trace21k: clim_chelsa_trace21k
 - /user/conf/processes@processes.smb_enhanced_accpdd: smb_enhanced_accpdd
-- /user/conf/processes@processes.heatmaps: heatmaps
+# - /user/conf/processes@processes.heatmaps: heatmaps
 - /user/conf/outputs@outputs.write_ts_henz: write_ts_henz
 
 - override /inputs:
@@ -31,7 +31,7 @@ defaults:
   - time
   - thk
   - avalanche
-  - heatmaps
+  # - heatmaps
 - override /outputs:
   - write_ncdf
   - write_ts_henz
@@ -62,12 +62,12 @@ processes:
       bcs: [no_inflow]
   time:
     start: -15000
-    end: 80.0
+    end: 0.0
     save: 10
   avalanche:
     angleOfRepose: 60.0
-  heatmaps:
-    time_start_icemargin: -14000.0
+  # heatmaps:
+  #   time_start_icemargin: -14000.0
 
 outputs:
   write_ncdf:
