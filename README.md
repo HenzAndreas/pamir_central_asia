@@ -48,6 +48,12 @@ pamir_central_asia/
 ├── igm/
 │   ├── all-igm-folders/
 │   └── igm_run.py
+├── data/                # here some basic climate data for example
+│   └── trace21k-pamir
+│   │   ├── lapse_rate_monthly
+│   │   ├── precipitation_monthly
+│   │   ├── temperature_monthly
+│   │   └── dem
 ├── dam-jailoo/          # One project at the moment
 │   ├── data/
 │   │   ├── here-your-nc-input-file # topography, initial ice thicknes, etc.
