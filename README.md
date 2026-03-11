@@ -24,22 +24,24 @@ Then, navigate to the folder containing `setup.py` and run:
 pip install -e .
 ```
 
-### Folder structure
+### 📁 Folder Structure
+
+```bash
 pamir_central_asia/
 ├── README.md
 ├── setup.py
 ├── igm/
-│   ├── all-igm-folders
-│   ├── igm_run.py
-├── dam-jailoo/ (one project at the moment)
+│   ├── all-igm-folders/
+│   └── igm_run.py
+├── dam-jailoo/          # One project at the moment
 │   ├── data/
 │   │   ├── here-your-nc-file
 │   │   └── and-ice-mask
 │   ├── experiment/
-│   │   ├── here are .yaml config files you want to use
+│   │   └── here-are-.yaml-config-files-you-want-to-use
 │   ├── user/
-│   │   ├── user-defined-modules (do not change unless you are familiar with it)
+│   │   └── user-defined-modules  # Do not change unless you are familiar with it
 │   ├── output/
-│   │   ├── your output
-│   └── run_igm_run.py (if you need to run it in a debugger (like vs code python debugger) it can be useful to have a python file to run)
-
+│   │   └── your-output
+│   └── run_igm_run.py   # Useful for running in a debugger (e.g., VS Code)
+```
