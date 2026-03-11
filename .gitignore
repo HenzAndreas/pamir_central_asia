@@ -14,7 +14,7 @@
 /ensemble*
 data/trace21k-pamir/*
 multirun
-outputs
+*output
 *.mp4
 
 
