@@ -55,10 +55,11 @@ def run(cfg, state):
             # take smb to calculate ela
             smb = state.smb
             # Find indices where the absolute value of smb is less than 0.1
-            smb_around_0 = np.abs(smb) < 0.1
+            smb_around_0 = np.abs(smb) < 0.1 
+            is_ice = state.thk > 1  # also only consider points where there is ice (thk > 1 m)
 
             # Filter state.topg using the boolean mask
-            filtered_topg = state.topg[smb_around_0]
+            filtered_topg = state.topg[smb_around_0 & is_ice]
 
         # Check if the filtered array is empty
         if len(filtered_topg) == 0 or np.isnan(filtered_topg).all():
