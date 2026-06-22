@@ -25,8 +25,7 @@ defaults:
 - override /inputs:
   - load_ncdf
 - override /processes:
-  - clim_chelsa_trace21k
-  - smb_enhanced_accpdd
+  - smb_simple
   - iceflow
   - time
   - thk
@@ -47,12 +46,11 @@ inputs:
     icemask_shapefile: ../../../data/icemask.shp
 
 processes:
-  clim_chelsa_trace21k:
-    air_temp_offset: -1.0
-  smb_enhanced_accpdd:
-    precip_offset: 1.5
-    type_of_aspect_correction: "temperature"
-    aspect_scaling_factor: 1.1
+  # smb_simple:
+    # update_freq: 1
+    # precip_offset: 1.0
+    # type_of_aspect_correction: "temperature"
+    # aspect_scaling_factor: 1.1
   iceflow:
     method: unified
     numerics:
