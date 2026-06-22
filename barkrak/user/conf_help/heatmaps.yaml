@@ -1,0 +1,17 @@
+hmap_freq:
+  Type: int
+  Units: yr
+  Description: "Frequency to get heat map of the ice margin"
+time_start_icemargin:
+  Type: float
+  Units: yr (ka BP)
+  Description: "Start year to write heat map, for example if there is the need to only look after ice build-up"
+max_thickness:
+  Type: float
+  Units: m
+  Description: "Maximum thickness to be considered in the heat map"
+min_thickness:
+  Type: float
+  Units: m
+  Description: "Minimum thickness to be considered in the heat map"   
+    

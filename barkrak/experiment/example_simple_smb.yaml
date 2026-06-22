@@ -1,0 +1,72 @@
+# @package _global_
+    
+core:
+  url_data: ''
+  hardware:
+    gpu_info: true
+    visible_gpus:
+    - 1 # eventually, if you have 1 GPU availble, set this to 0, I use it on a cluster where GPU 1 is the one I should use
+
+hydra:
+  run:
+    dir: output/${now:%Y-%m-%d}/smb_simple
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}
+    subdir: ${hydra.job.name}-${hydra.job.num}
+  # launcher:
+  #   n_jobs: 1
+
+defaults:
+- /user/conf/outputs@outputs.write_ts_henz: write_ts_henz
+
+- override /inputs:
+  - load_ncdf
+- override /processes:
+  - smb_simple
+  - iceflow
+  - time
+  - thk
+  - avalanche
+  # - heatmaps
+- override /outputs:
+  - write_ncdf
+  - write_ts_henz
+
+inputs:
+  load_ncdf:
+    input_file: "barkrak_igm_topg.nc"
+    icemask_include: true
+    icemask_shapefile: "../../../data/icemask_barkrak_32643.shp"
+
+processes:
+  smb_simple:
+    update_freq: 1
+    array: 
+      - ["time", "gradabl", "gradacc", "ela", "accmax"]
+      - [-1500, 0.004, 0.0018, 3500, 2.0]
+      - [-0750, 0.004, 0.0018, 3500, 2.0]
+      - [-0000, 0.004, 0.0018, 4000, 2.0]
+  iceflow:
+    method: unified
+    numerics:
+      basis_vertical: Lagrange
+    unified:
+      bcs: [no_inflow]
+  time:
+    start: -1500.0
+    end: 0.0
+    save: 100.0
+  avalanche:
+    angleOfRepose: 60.0
+  # heatmaps:
+  #   time_start_icemargin: -14000.0
+
+outputs:
+  write_ncdf:
+    vars_to_save:
+    - topg
+    - usurf
+    - thk
+    - smb
+    - velsurf_mag
+    - velbase_mag
