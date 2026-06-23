@@ -56,9 +56,9 @@ processes:
     unified:
       bcs: [no_inflow]
   time:
-    start: -21000.0
-    end: 80.0
-    save: 100.0
+    start: -18500.0
+    end: -17500.0
+    save: 20.0
   avalanche:
     angleOfRepose: 60.0
   # heatmaps:
