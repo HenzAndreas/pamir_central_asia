@@ -9,7 +9,7 @@ core:
 
 hydra:
   run:
-    dir: output/${now:%Y-%m-%d}/example
+    dir: output/${now:%Y-%m-%d}/example_after_correction
   sweep:
     dir: multirun/${now:%Y-%m-%d}
     subdir: ${hydra.job.name}-${hydra.job.num}
@@ -56,7 +56,7 @@ processes:
     unified:
       bcs: [no_inflow]
   time:
-    start: -18500.0
+    start: -18100.0
     end: -17500.0
     save: 20.0
   avalanche:
